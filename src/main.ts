@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 import { userKey } from './config/key'
+
+import './styles/index.css'
+import './styles/main.css'
 
 const app = createApp(App)
 
