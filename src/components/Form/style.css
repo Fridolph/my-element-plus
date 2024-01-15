@@ -1,0 +1,55 @@
+.vk-form {
+  --vk-form-label-font-size: var(--vk-font-size-base);
+  --vk-form-content-font-size: var(--vk-font-size-base);
+}
+.vk-form-item {
+  display: flex;
+  margin-bottom: 18px;
+  .vk-form-item__label {
+    width: 150px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: flex-end;
+    font-size: var(--vk-form-label-font-size);
+    color: var(--vk-text-color-regular);
+  }
+  .vk-form-item__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+    line-height: 32px;
+    font-size: var(--vk-form-content-font-size);
+    min-width: 0;
+    position: relative;
+  }
+  .vk-form-item__error-msg {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 2px;
+    color: var(--vk-color-danger);
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
+.vk-form-item.is-error .vk-input__wrapper {
+  box-shadow: 0 0 0 1px var(--vk-color-danger) inset;
+}
+.vk-form-item.is-success .vk-input__wrapper {
+  box-shadow: 0 0 0 1px var(--vk-color-success) inset;
+}
+.vk-form-item.is-required > .vk-form-item__label::before {
+  content: "*";
+  color: var(--vk-color-danger);
+  margin-right: 4px;
+}
+
+
+
+
+

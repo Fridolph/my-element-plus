@@ -1,21 +1,25 @@
 <template>
   <header>
     <img src="/vite.svg" class="logo" alt="Vite logo" />
-    <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    <img src="./assets/logo.svg" class="logo vue" alt="Vue logo" />
   </header>
   <main>
     <div class="component-module">
-      <div class="module-title">Button</div>
+      <h1 class="module-title">Button</h1>
       <Button>default</Button>
       <Button type="primary" plain ref="buttonRef">primary</Button>
-      <!-- <Button type="danger">danger</Button> -->
-      <!-- <Button type="info">info</Button> -->
-      <!-- <Button type="success">success</Button> -->
-      <!-- <Button type="warning">warning</Button> -->
+      <Button type="danger">danger</Button>
+      <Button type="info">info</Button>
+      <Button type="success">success</Button>
+      <Button type="warning">warning</Button>
       <Button :disabled="true">disabled</Button>
-    </div>
-    <div class="component-module">
-      <div class="module-title">测试一下</div>
+      <br />
+      <br />
+      <Button plain type="primary" ref="buttonRef">primary</Button>
+      <Button plain type="danger">danger</Button>
+      <Button plain type="info">info</Button>
+      <Button plain type="success">success</Button>
+      <Button plain type="warning">warning</Button>
     </div>
   </main>
 </template>
@@ -34,15 +38,15 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style lang="postcss">
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
@@ -50,7 +54,7 @@ onMounted(() => {
 
 .component-module {
   .module-title {
-    color: pink;
+    color: var(--vk-text-color-primary);
   }
 }
 </style>

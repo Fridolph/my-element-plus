@@ -1,0 +1,77 @@
+.vk-select {
+  --vk-select-item-hover-bg-color: var(--vk-fill-color-light);
+  --vk-select-item-font-size: var(--vk-font-size-base);
+  --vk-select-item-font-color: var(--vk-text-color-regular);
+  --vk-select-item-selected-font-color: var(--vk-color-primary);
+  --vk-select-item-disabled-font-color: var(--vk-text-color-placeholder);
+  --vk-select-input-focus-border-color: var(--vk-color-primary);
+}
+
+.vk-select {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 32px;
+  .vk-tooltip .vk-tooltip__popper {
+    padding: 0;
+  }
+  .vk-input.is-focus .vk-input__wrapper {
+    box-shadow: 0 0 0 1px var(--vk-select-input-focus-border-color) inset!important
+  }
+  .vk-input {
+    .header-angle {
+      transition: transform var(--vk-transition-duration);
+      &.is-active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .vk-input__inner {
+    cursor: pointer;
+  }
+  .vk-select__nodata, .vk-select__loading {
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    color: var(--vk-text-color-secondary);
+    font-size: var(--vk-select-font-size);
+  }
+  .vk-select__menu {
+    list-style: none;
+    margin: 6px 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .vk-select__menu-item { 
+    margin: 0;
+    font-size: var(--vk-select-item-font-size);
+    padding: 0 32px 0 20px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--vk-select-item-font-color);
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--vk-select-item-hover-bg-color);
+    }
+    &.is-selected {
+      color: var(--vk-select-item-selected-font-color);
+      font-weight: 700;    
+    }
+    &.is-highlighted {
+      background-color: var(--vk-select-item-hover-bg-color);
+    }
+    &.is-disabled {
+      color: var(--vk-select-item-disabled-font-color);
+      cursor: not-allowed;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+  }
+}

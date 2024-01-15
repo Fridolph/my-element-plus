@@ -19,7 +19,7 @@
     --vk-color-$(val)-dark-2: mix(#000, $(color), .2);
   }
 
-  --vk-bg-color: #ffffff;
+  --vk-bg-color: #ffffff; 
   --vk-bg-color-page: #f2f3f5;
   --vk-bg-color-overlay: #ffffff;
   --vk-text-color-primary: #303133;

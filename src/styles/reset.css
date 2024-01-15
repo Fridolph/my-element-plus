@@ -3,9 +3,6 @@ body {
   font-weight: 400;
   font-size: var(--vk-font-size-base);
   color: var(--vk-text-color-primary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -41,15 +38,15 @@ h6 {
 }
 
 h1 {
-  font-size: calc(var(--vk-font-size-base) + 6px);
+  font-size: calc(var(--vk-font-size-base) + 12px);
 }
 
 h2 {
-  font-size: calc(var(--vk-font-size-base) + 4px);
+  font-size: calc(var(--vk-font-size-base) + 8px);
 }
 
 h3 {
-  font-size: calc(var(--vk-font-size-base) + 2px);
+  font-size: calc(var(--vk-font-size-base) + 4px);
 }
 
 h4,

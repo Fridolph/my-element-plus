@@ -9,38 +9,40 @@
       'is-round': round,
       'is-circle': circle,
       'is-disabled': disabled,
+      'is-loading': loading
     }"
-    :disabled="disabled"
+    :disabled="disabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
   >
-    <span><slot></slot></span>
+    <!-- <Icon icon="spinner" spin v-if="loading" /> -->
+    <!-- <Icon :icon="icon" v-if="icon" /> -->
+    <span>
+      <slot />
+    </span>
   </button>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: 'VkButton',
-})
-</script>
 <script setup lang="ts">
-import type { ButtonProps } from './types'
 import { ref } from 'vue'
+import type { ButtonProps } from './types'
+
+
+defineOptions({
+  name: 'VkButton'
+})
 
 withDefaults(defineProps<ButtonProps>(), {
-  nativeType: 'button',
+  nativeType: 'button'
 })
 
 const _ref = ref<HTMLButtonElement>()
 
 defineExpose({
-  ref: _ref,
+  ref: _ref
 })
 </script>
 
-<style>
-.vk-button {
-  background-color: var(--main-bg-color);
-}
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
 </style>
