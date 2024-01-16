@@ -25,7 +25,7 @@
       <Button icon="arrow-up">向上图标</Button>
     </Wrap>
     <Wrap title="Collapse">
-      <Collapse v-model="openValue" accorrdion>
+      <Collapse v-model="openValue" accordion>
         <CollapseItem name="item1">
           <template #title>
             <h2>我是标题</h2>
@@ -36,11 +36,11 @@
         <CollapseItem name="item2" title="测试标题2">
           <p>直接写些简单内容 - 双联单控福建省两地分居立卡手机卡了双联单控就</p>
         </CollapseItem>
-        <CollapseItem name="item3" title="disabled状态">
+        <!-- <CollapseItem disabled name="item3" title="disabled状态">
           <div>数控刀具法律手段科技 胜多负少考虑到就分手了科技</div>
           <div>塑料袋咖啡机塑料袋可视对讲发了尽快slkj</div>
           <div>sdflksjdfaskjfowieruowieruo9iaosodifusodfui</div>
-        </CollapseItem>
+        </CollapseItem> -->
       </Collapse>
       <p>openValue: {{ openValue }}</p>
     </Wrap>

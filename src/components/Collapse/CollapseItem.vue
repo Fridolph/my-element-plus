@@ -37,8 +37,11 @@ defineOptions({
 const props = defineProps<CollapseItemProps>()
 
 const collapseContext = inject(collapseContextKey)
-const isActive = computed(() => collapseContext?.activeNames.value.includes(props.name))
+const isActive = computed(() => {
+  return collapseContext?.activeNames.value.includes(props.name)
+})
 const handleClick = () => {
+  if (props.disabled) return 
   // console.log('handleClick: ', props.name);
   collapseContext?.handleItemClick(props.name)
 }

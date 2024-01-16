@@ -1,10 +1,10 @@
 import type { Ref, InjectionKey } from 'vue'
 
-export type NameType = string | number
+export type NameType = string
 
 export type CollapseProps = {
   modelValue: NameType[]
-  accorrdion?: boolean // 是否支持手风琴模式
+  accordion?: boolean // 是否支持手风琴模式
 }
 
 export interface CollapseContext {
