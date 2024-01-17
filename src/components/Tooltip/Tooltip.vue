@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<TooltipProps>(), {
   trigger: 'hover',
   transition: 'fade',
   openDelay: 66,
-  closeDelay: 100,
+  closeDelay: 66,
 })
 const emits = defineEmits<TooltipEmits>()
 const isOpen = ref(false)

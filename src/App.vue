@@ -65,11 +65,19 @@
         <Button>我是菜单</Button>
       </Dropdown>
     </Wrap>
+
+    <Wrap title="Message">
+      <Button @click="onMessage">消息3秒消失</Button>
+      <Button @click="onMessage2">不消失，有X</Button>
+      <Button @click="onMessage3">不消失3，有X</Button>
+
+      <Message message="hello world" />
+    </Wrap>
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, h } from 'vue'
+import { ref, h } from 'vue'
 import Wrap from './components/Wrap/Wrap.vue'
 import type { ButtonInstance } from './components/Button/types'
 import Button from './components/Button/Button.vue'
@@ -77,19 +85,15 @@ import Collapse from './components/Collapse/Collapse.vue'
 import CollapseItem from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
 import Tooltip from './components/Tooltip/Tooltip.vue'
-import Dropdown from './components/Dropdown/Dropdown.tsx'
+import Dropdown from './components/Dropdown/Dropdown.vue'
 import { MenuOptions } from './components/Dropdown/types'
+import Message from './components/Message/Message.vue'
+import { createMessage } from './components/Message/createMessage'
 // Button
 const buttonRef = ref<ButtonInstance | null>(null)
 
 // Collapse
 const openValue = ref(['item1'])
-
-onMounted(() => {
-  if (buttonRef.value) {
-    // console.log('onMounted: ', buttonRef.value.ref)
-  }
-})
 
 // Dropdown
 const menuOptions: MenuOptions[] = [
@@ -102,7 +106,18 @@ const onSelect = (item: MenuOptions) => {
   console.log('onSelect: ', item)
 }
 const onVisibleChange = (value: boolean) => {
-  // console.log('onVisibleChange: ', value);
+  console.log('onVisibleChange: ', value);
+}
+
+// Message
+const onMessage = () => {
+  createMessage({ message: 'hello > Message', duration: 3000 })
+}
+const onMessage2 = () => {
+  createMessage({ type: 'success', message: 'my-element-plus > Message2', duration: 0, showClose: true })
+}
+const onMessage3 = () => {
+  createMessage({ type: 'danger', message: 'my-element-plus > Message3', duration: 0, showClose: true })
 }
 </script>
 
@@ -120,3 +135,4 @@ const onVisibleChange = (value: boolean) => {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+./components/Message/createMessage
