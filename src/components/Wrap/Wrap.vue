@@ -9,6 +9,7 @@
 type WrapProps = {
   title?: string
 }
+
 defineProps<WrapProps>()
 </script>
 
@@ -16,5 +17,8 @@ defineProps<WrapProps>()
 .module {
   padding: 10px;
   margin-bottom: 20px;
+  h1 {
+    margin-bottom: 20px;
+  }
 }
 </style>
