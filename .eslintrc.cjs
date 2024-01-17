@@ -16,6 +16,7 @@ module.exports = {
     'comma-dangle': 0,
     // 以下为vue3的一些规则
     'vue/multi-word-component-names': 0,
+    '@typescript-eslint/no-unused-vars': 0
   },
   globals: {
     defineOptions: 'readonly',

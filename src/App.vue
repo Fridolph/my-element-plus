@@ -49,16 +49,27 @@
       <Icon icon="fa-solid fa-check" type="success" size="2x" />
     </Wrap>
 
-    <Wrap title="tooltip">
+    <Wrap title="Tooltip">
       <Tooltip placement="right" width="300" content="收到联发科见识到了就开了">
         <Button>我是Tooltip</Button>
       </Tooltip>
+    </Wrap>
+
+    <Wrap title="Dropdown">
+      <Dropdown
+        :menu-options="menuOptions"
+        trigger="click"
+        @visible-change="onVisibleChange"
+        @select="onSelect"
+      >
+        <Button>我是菜单</Button>
+      </Dropdown>
     </Wrap>
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, h } from 'vue'
 import Wrap from './components/Wrap/Wrap.vue'
 import type { ButtonInstance } from './components/Button/types'
 import Button from './components/Button/Button.vue'
@@ -66,7 +77,8 @@ import Collapse from './components/Collapse/Collapse.vue'
 import CollapseItem from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
 import Tooltip from './components/Tooltip/Tooltip.vue'
-
+import Dropdown from './components/Dropdown/Dropdown.tsx'
+import { MenuOptions } from './components/Dropdown/types'
 // Button
 const buttonRef = ref<ButtonInstance | null>(null)
 
@@ -78,6 +90,20 @@ onMounted(() => {
     // console.log('onMounted: ', buttonRef.value.ref)
   }
 })
+
+// Dropdown
+const menuOptions: MenuOptions[] = [
+  { key: 1, label: 'item1' },
+  { key: 2, label: 'item2', disabled: true },
+  { key: 3, label: h('b', '我是h(b, "标签")') },
+  { key: 4, label: 'item4', divided: true },
+]
+const onSelect = (item: MenuOptions) => {
+  console.log('onSelect: ', item)
+}
+const onVisibleChange = (value: boolean) => {
+  // console.log('onVisibleChange: ', value);
+}
 </script>
 
 <style lang="postcss">
