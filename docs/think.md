@@ -25,6 +25,6 @@ const { theme, page, frontmatter } = useData()
 </script>
 ```
 
-## More
+### More
 
 查看文档以获取运行时 API 的完整列表 [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).

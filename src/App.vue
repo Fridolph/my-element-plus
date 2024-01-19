@@ -73,6 +73,11 @@
 
       <Message message="hello world" />
     </Wrap>
+
+    <Wrap title="Input">
+      <Input v-model="input" /> 
+      <Input type="password" v-model="input2" /> 
+    </Wrap>
   </main>
 </template>
 
@@ -89,6 +94,7 @@ import Dropdown from './components/Dropdown/Dropdown.vue'
 import { MenuOptions } from './components/Dropdown/types'
 import Message from './components/Message/Message.vue'
 import { createMessage } from './components/Message/createMessage'
+import Input from './components/Input/Input.vue'
 // Button
 const buttonRef = ref<ButtonInstance | null>(null)
 
@@ -119,6 +125,10 @@ const onMessage2 = () => {
 const onMessage3 = () => {
   createMessage({ type: 'danger', message: 'my-element-plus > Message3', duration: 0, showClose: true })
 }
+
+// Input
+const input = ref('xxx')
+const input2 = ref('123456')
 </script>
 
 <style lang="postcss">

@@ -6,15 +6,25 @@
 
 前端开发 `styles/vars` 相关颜色变量甚至可让 UI 同事来维护
 
-# 官方文档推荐的示例
+## 关于组件
 
-暂时保留了
+组件开发的方法论
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+- 根据需求初步确定 `属性`、`事件`、`slots`、`expose` （不需要特别精确，后续随着功能开发可持续更新）
+- 组件的静态版本（不添加交互，只有html结构、classes、slots）
+- 将需求中有行为的功能做成开发计划列表
+- 根据列表一项项地推进，完成对应功能
+- 逐步完成 样式 / 测试 等收尾工作
+- 更新文档 及 发布
 
-## Syntax Highlighting
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+## 官方文档推荐的示例
+
+暂时保留了. 本页面演示了 VitePress 提供的一些内置 Markdown 扩展。
+
+### 语法高亮
+
+VitePress 提供由 [Shiki](https://github.com/shikijs/shiki) 提供支持的语法突出显示，以及行突出显示等附加功能：
 
 **Input**
 
@@ -42,7 +52,7 @@ export default {
 }
 ```
 
-## Custom Containers
+### Custom Containers
 
 **Input**
 
@@ -90,6 +100,6 @@ This is a dangerous warning.
 This is a details block.
 :::
 
-## More
+### More
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
+查看文档以获取 Markdown 扩展的 [full list of markdown extensions](https://vitepress.dev/guide/markdown).

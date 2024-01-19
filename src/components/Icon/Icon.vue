@@ -20,5 +20,3 @@ const customStyles = computed(() => {
   return props.color ? { color: props.color } : {}
 })
 </script>
-
-<style scoped></style>
