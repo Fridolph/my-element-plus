@@ -11,7 +11,7 @@
   font-size: 14px;
   line-height: 20px;
   height: 32px;
-  .vk-swtich__input {
+  &__input {
     position: absolute;
     width: 0;
     height: 0;
@@ -43,6 +43,7 @@
     }
   }
 }
+
 .vk-switch--large {
   font-size: 14px;
   line-height: 24px;
@@ -63,6 +64,7 @@
     }
   }
 }
+
 .vk-switch--small {
   font-size: 12px;
   line-height: 16px;
@@ -77,7 +79,7 @@
     }
   }
   &.is-checked {
-    .vk-switch__core .vk-switch-core-action {
+    .vk-switch__core .vk-switch__core-action {
       left: calc(100% - 13px);
       color: var(--vk-switch-on-color);
     }
@@ -96,7 +98,7 @@
   background: var(--vk-switch-off-color);
   cursor: pointer;
   transition: border-color var(--vk-transition-duration),background-color var(--vk-transition-duration);
-  .vk-switch__core-action {
+  &-action {
     position: absolute;
     left: 1px;
     border-radius: var(--vk-border-radius-circle);
@@ -105,7 +107,7 @@
     background-color: var(--vk-color-white);
     transition: all var(--vk-transition-duration);
   }
-  .vk-switch__core-inner {
+  &-inner {
     width: 100%;
     transition: all var(--vk-transition-duration);
     height: 16px;
@@ -114,7 +116,7 @@
     align-items: center;
     overflow: hidden;
     padding: 0 4px 0 18px;
-    .vk-switch__core-inner-text {
+    &-text {
       font-size: 12px;
       color: var(--vk-color-white);
       user-select: none;

@@ -78,6 +78,10 @@
       <Input v-model="input" /> 
       <Input type="password" v-model="input2" /> 
     </Wrap>
+
+    <Wrap title="Switch">
+      <Switch />
+    </Wrap>
   </main>
 </template>
 
@@ -95,6 +99,7 @@ import { MenuOptions } from './components/Dropdown/types'
 import Message from './components/Message/Message.vue'
 import { createMessage } from './components/Message/createMessage'
 import Input from './components/Input/Input.vue'
+import Switch from './components/Switch/Switch.vue'
 // Button
 const buttonRef = ref<ButtonInstance | null>(null)
 
