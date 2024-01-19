@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 组件使用文档
-      link: /markdown-examples
+      link: /component.md
     - theme: alt
       text: 编写笔记和思考
-      link: /api-examples
+      link: /think.md
 
 features:
   - title: vue3.4 + TypeScript + Vite

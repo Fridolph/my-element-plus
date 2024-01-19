@@ -1,20 +1,21 @@
-## 需求分析
+---
+title: Collapse | V-Element
+description: Collapse 组件的文档
+---
 
-- 静态展示
-- 提供简单交互
-- 多种解决方案
-- 涉及一些新的知识点
-  - Provide / Inject
-  - v-model 实现
-  - slots
-  - Transition
+# Collapse
 
-## 了解功能
+简易的折叠面板
 
-- 展示多个item，有标题和内容两部分
-- 点击标题可以关闭和展示内容
-- 可选手风琴模式
+## 基础用法
 
-注意
+使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。
 
-当使用 defineOptions，设置`inheritAttrs: false`时，要配对使用 v-bind="$attrs" 这样不会丢一些透传属性
+<preview path="../demo/Collpase/Basic.vue" title="基础用法" description="Button 组件的基础用法"></preview>
+
+## Props
+
+| 键名       | 描述               | 类型       | 默认值 |
+| ---------- | ------------------ | ---------- | ------ |
+| modelValue | 当前打开项         | NameType[] | -      |
+| accordion  | 是否支持手风琴模式 | boolean    | false  |

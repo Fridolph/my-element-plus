@@ -1,33 +1,29 @@
-## 需求分析
+---
+title: Button | V-Element
+description: Button 组件的文档
+---
 
-Button组件大部分关注样式，没有交互
+# Button 按钮
 
-根据分析可得具体属性列表：
+常用的操作按钮
 
-|属性名|数据类型|默认值|相关描述|
-|-|-|-|-|
-|type|string|default|代表不同样式，如default、primary、danger、info、success、warning等|
-|plain|boolean|false|样式的不同展现模式 之前的ghost 实心空心模式|
-|round|boolean|false|按钮是否有border-radius圆角|
-|circle|boolean|false|是否是圆形按钮|
-|size|string|normal|预设不同大小small、normal、large|
-|disabled|boolean|false|是否为禁用状态|
-|icon|string|''|后续再添加|
-|loading|boolean|false|是否为loading状态|
+## 基础用法
 
-## 遇到问题
+使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。
 
-1. 不能导入外部文件的类型
+<preview path="../demo/Button/Basic.vue" title="基础用法" description="Button 组件的基础用法"></preview>
 
-https://cn.vuejs.org/guide/typescript/composition-api.html#typing-component-props
+### Button Attributes
 
-2. 组件属性需要单独写一个script
-
-```html
-<script lang="ts">
-import {defineComponent} from 'vue'
-export default defineComponent({
-  name: 'xxx-xxx'
-})
-</script>
-```
+| 键名       | 描述         | 类型                                    | 默认值 |
+| ---------- | ------------ | --------------------------------------- | ------ |
+| size       | 大小         | large、small、normal                    | normal |
+| type       | 类型         | primary、success、warning、danger、info | -      |
+| plain      | 是否为空心   | boolean                                 | false  |
+| round      | 是否有圆角   | boolean                                 | false  |
+| circle     | 圆形按钮     | boolean                                 | false  |
+| loading    | 等待         | boolean                                 | false  |
+| disabled   | 禁用         | boolean                                 | false  |
+| icon       | 加图标       | string                                  | -      |
+| autofocus  | 原生自动聚焦 | boolean                                 | false  |
+| nativeType | 原生属性     | enum: button、submit、reset             | button |

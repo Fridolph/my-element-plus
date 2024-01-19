@@ -8,6 +8,7 @@
 }
 
 .vk-tooltip {
+  position: relative;  
   .vk-tooltip__popper {
     background: var(--vk-popover-bg-color);
     border-radius: var(--vk-popover-border-radius);

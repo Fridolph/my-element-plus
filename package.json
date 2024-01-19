@@ -14,6 +14,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@types/node": "^20.11.0",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.2",
     "axios": "^1.6.5",
     "lodash-es": "^4.17.21",
     "vue": "^3.3.11"

@@ -3,7 +3,7 @@
     <div class="vk-tooltip__trigger" ref="triggerNode" v-on="events">
       <slot />
     </div>
-    <Transition :name="transition">
+    <Transition :name="transitionName">
       <div v-if="isOpen" class="vk-tooltip__popper" ref="popperNode">
         <slot name="content">
           {{ content }}
@@ -27,7 +27,7 @@ defineOptions({
 const props = withDefaults(defineProps<TooltipProps>(), {
   placement: 'bottom',
   trigger: 'hover',
-  transition: 'fade',
+  transitionName: 'fade',
   openDelay: 66,
   closeDelay: 66,
 })

@@ -1,0 +1,26 @@
+:root {
+  --vp-c-brand: var(--vk-color-primary);
+  --vp-c-brand-light: var(--vk-color-primary-light-3);
+  --vp-c-brand-lighter: var(--vk-color-primary-light-5);
+  --vp-c-brand-dark: var(--vk-color-primary-dark-2);
+  --vp-c-brand-darker: #2c73b9;
+
+  --component-preview-bg: var(--vp-code-block-bg);
+  --component-preview-soft: var(--vp-code-block-bg-light);
+}
+
+body {
+  color: var(--vp-c-text-1);
+}
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc {
+  .vk-collapse-item__header {
+    h2 {
+      border-top: none;
+      font-size: 16px;
+    }
+  }
+}

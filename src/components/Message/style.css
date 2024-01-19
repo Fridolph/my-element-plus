@@ -33,6 +33,7 @@
   .vk-message__close {
     display: flex;
     align-items: center;
+    margin-left: 10px;
   }
   .vk-message__close svg {
     cursor: pointer;

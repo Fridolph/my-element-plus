@@ -31,7 +31,7 @@
   &.is-disabled {
     color: var(--vk-collapse-disabled-text-color);
     cursor: not-allowed;
-    background-image: none;
+    background-color: #f1f1f1;
   }
 
   &.is-active {

@@ -1,28 +1,33 @@
-- 通用组件
-- tooltip
-- dropdown
-- select
-- ...
+---
+title: Tooltip | V-Element
+description: Tooltip 组件的文档
+---
 
-## 功能分析
+# Tooltip
 
-- 基本功能，两块区域
-  - 触发区域
-  - 展示区域
-- 触发方式
-  - 点击
-  - hover
-  - 手动
+用于展示更多消息
 
-重点就是触发区，发生特定事件时，展示区的内容将隐藏
+## 基础用法
 
-## 开发
+默认 hover 触发，也可改为 click 触发
 
-- 基础功能实现 （使用popper.js 来完成位置的展示
-- 支持 click / hover 两种触发方式
-- 支持 clickoutside 时的隐藏
-- 支持手动触发
-- 支持popper参数
-- 过渡效果
-- 支持延迟显示
-- 其他样式处理
+<preview path="../demo/Tooltip/Basic.vue" title="基础用法" description="Tooltip 组件的基础用法"></preview>
+
+### Props
+
+| 键名           | 描述                         | 类型                 | 默认值 |
+| -------------- | ---------------------------- | -------------------- | ------ |
+| content        | 文字                         | string               | -      |
+| trigger        | 触发类型                     | enum: [hover, click] | hover  |
+| placement      | 出现位置                     | string               | bottom |
+| manual         | 是否手动触发                 | boolean              | false  |
+| transitionName | 过渡名                       | string              | fade  |
+| openDelay      | 打开延迟                     | number               | 0 毫秒 |
+| closeDelay     | 关闭延迟                     | number               | 0 毫秒 |
+| popperOptions  | popper.js 配置，更多参考文档 | Options              | -      |
+
+<style>
+.vitepress-demo-preview__element-plus__container {
+  overflow: visible;
+}
+</style>

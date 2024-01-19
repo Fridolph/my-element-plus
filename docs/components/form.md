@@ -1,21 +1,20 @@
 ---
-title: Message | V-Element
-description: Message 组件的文档
+title: Form | V-Element
+description: Form 组件的文档
 ---
 
-# Message
+# Form 表单
 
-可直接用于展示，或用 API 操作新建实例展示
+表单包含 `输入框`, `单选框`, `下拉选择`, `多选框` 等用户输入的组件。 
+使用表单，您可以收集、验证和提交数据。
 
-## 基础用法
+## 典型表单
 
-通过 `import Message from 'my-element'` 使用
+最基础的表单包括各种输入表单项，比如input、select、radio、checkbox等。
 
-<preview path="../demo/Message/Basic.vue" title="基础用法" description="Message 组件的基础用法"></preview>
+在每一个 form 组件中，你需要一个 form-item 字段作为输入项的容器，用于获取值与验证值。
 
-## createMessage
-
-<preview path="../demo/Message/Basic2.vue" title="createMessage" description="通过`createMessage`来创建实例"></preview>
+<preview path="../demo/Form/Basic.vue" title="典型表单" description="Form 典型表单"></preview>
 
 ## Props
 
@@ -27,11 +26,3 @@ description: Message 组件的文档
 | type           | 默认提供四种类型支持         | success、info、warning、danger | info        |
 | transitionName | 过渡效果                     | string                         | fade        |
 | onDestory      | 组件销毁方法                 | Function                       | -           |
-| offset         | 偏移位置                     | number                         | 0           |
-
-## Instance
-
-| 键名   | 描述               | 类型   | 默认值      |
-| ------ | ------------------ | ------ | ----------- |
-| id     | 实例对应 id        | string | -           |
-| zIndex | 实例生成的 z-index | number | 4000 (毫秒) |

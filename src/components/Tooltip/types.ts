@@ -6,7 +6,7 @@ export interface TooltipProps {
   placement?: Placement
   manual?: boolean
   popperOptions?: Partial<Options>
-  transition?: string
+  transitionName?: string
   openDelay?: number
   closeDelay?: number
 }

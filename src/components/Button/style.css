@@ -38,6 +38,7 @@
   padding: 8px 15px;
   font-size: var(--vk-font-size-base);
   border-radius: var(--vk-border-radius-base);
+  margin-bottom: 10px;
   & + & {
     margin-left: 12px;
   }
