@@ -22,6 +22,17 @@
     word-break: break-all;
     box-sizing: border-box;
     z-index: 1000;
+    &::before {      
+      content: '';
+      position: absolute;
+      left: -10px;
+      right: -10px;
+      top: -10px;
+      bottom: -10px;
+      opacity: 0;
+      z-index: -1;
+    }
+
     #arrow,
     #arrow::before {
       position: absolute;
@@ -36,14 +47,18 @@
     #arrow::before {
       visibility: visible;
       content: "";
-      transform: rotate(45deg);
+      transform: rotate(45deg);      
     }
     &[data-popper-placement^='top'] > #arrow {
+      left: 50%;
+      transform: translateX(-50%);
       bottom: -5px;
     }
     
     &[data-popper-placement^='bottom'] > #arrow {
       top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     &[data-popper-placement^='left'] > #arrow {

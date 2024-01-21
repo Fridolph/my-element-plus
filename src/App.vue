@@ -50,9 +50,30 @@
     </Wrap>
 
     <Wrap title="Tooltip">
-      <Tooltip placement="right" width="300" content="收到联发科见识到了就开了">
-        <Button>我是Tooltip</Button>
+      <Tooltip placement="bottom" width="300" content="简单">
+        <Button>默认hover触发</Button>
       </Tooltip>
+      <span>------------</span>
+      <Tooltip
+        placement="right"
+        trigger="click"
+        content="圣诞快sdfs 水岸东方艾斯乐"
+      >
+        <Button>点我右边</Button>
+      </Tooltip>
+      <span>------------</span>
+      <Tooltip
+        placement="left"        
+        trigger="click"
+        content="圣诞快sdfs 水岸东方艾斯乐"
+      >
+        <Button>出现在左边</Button>
+      </Tooltip>      
+      <span>------------</span>
+      <Tooltip placement="top" width="300" content="简水电费水电单">
+        <Button>默认hover触发</Button>
+      </Tooltip>
+      <span>------------</span>
     </Wrap>
 
     <Wrap title="Dropdown">
@@ -75,12 +96,17 @@
     </Wrap>
 
     <Wrap title="Input">
-      <Input v-model="input" /> 
-      <Input type="password" v-model="input2" /> 
+      <Input v-model="input" />
+      <Input type="password" v-model="input2" />
     </Wrap>
 
     <Wrap title="Switch">
       <Switch />
+    </Wrap>
+
+    <Wrap title="Select">
+      <Select style="width:500px" v-model="selected" :options="selectOptions"></Select>
+      <span>selected: {{ selected }}</span>
     </Wrap>
   </main>
 </template>
@@ -100,6 +126,8 @@ import Message from './components/Message/Message.vue'
 import { createMessage } from './components/Message/createMessage'
 import Input from './components/Input/Input.vue'
 import Switch from './components/Switch/Switch.vue'
+import Select from './components/Select/Select.vue'
+
 // Button
 const buttonRef = ref<ButtonInstance | null>(null)
 
@@ -117,7 +145,7 @@ const onSelect = (item: MenuOptions) => {
   console.log('onSelect: ', item)
 }
 const onVisibleChange = (value: boolean) => {
-  console.log('onVisibleChange: ', value);
+  console.log('onVisibleChange: ', value)
 }
 
 // Message
@@ -125,15 +153,34 @@ const onMessage = () => {
   createMessage({ message: 'hello > Message', duration: 3000 })
 }
 const onMessage2 = () => {
-  createMessage({ type: 'success', message: 'my-element-plus > Message2', duration: 0, showClose: true })
+  createMessage({
+    type: 'success',
+    message: 'my-element-plus > Message2',
+    duration: 0,
+    showClose: true,
+  })
 }
 const onMessage3 = () => {
-  createMessage({ type: 'danger', message: 'my-element-plus > Message3', duration: 0, showClose: true })
+  createMessage({
+    type: 'danger',
+    message: 'my-element-plus > Message3',
+    duration: 0,
+    showClose: true,
+  })
 }
 
 // Input
 const input = ref('xxx')
 const input2 = ref('123456')
+
+// Select
+const selected = ref('1')
+const selectOptions = [
+  { label: '选项一', value: '1' },
+  { label: '选项二', value: '2' },
+  { label: '选项三', value: '3', disabled: true },
+  { label: '选项四', value: '3' },
+]
 </script>
 
 <style lang="postcss">
@@ -150,4 +197,3 @@ const input2 = ref('123456')
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
-./components/Message/createMessage

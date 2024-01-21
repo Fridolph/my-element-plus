@@ -41,13 +41,13 @@ description: Select 组件的文档
 
 服务器搜索数据，输入关键字进行查找。为了启用远程搜索，需要将 `filterable` 和 `remote` 设置为true，同时传入一个`remote-method`。 remote-method 为一个返回 Promise 的Function，类型为 `(value: string) => Promise<SelectOption[]>` 。
 
-<preview path="../demo/Select/Remote.vue" title="筛选选项" description="Select 筛选选项"></preview>
+<!-- <preview path="../demo/Select/Remote.vue" title="筛选选项" description="Select 筛选选项"></preview> -->
 
 ## Props
 
 | 键名           | 描述                         | 类型                           | 默认值      |
 | -------------- | ---------------------------- | ------------------------------ | ----------- |
-| message        | 消息内容                     | string / VNode                 | -           |
+| modelValue        | v-model                     | string                   | -           |
 | duration       | message 持续时间             | number                         | 4000 (毫秒) |
 | showClose      | 是否有 close Icon 可手动关闭 | boolean                        | false       |
 | type           | 默认提供四种类型支持         | success、info、warning、danger | info        |

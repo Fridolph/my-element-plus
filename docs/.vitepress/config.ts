@@ -5,7 +5,7 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 import { fileURLToPath, URL } from 'node:url'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'my-element-docs',
+  title: 'MyElement Docs',
   description: 'A VitePress Site',
   vite: {    
     plugins: [
@@ -26,8 +26,8 @@ export default defineConfig({
   },
   appearance: false,
   themeConfig: {
-    siteTitle:  'My Element Docs',
-    logo: './vite.svg',
+    siteTitle:  'MyElement Docs',
+    logo: 'https://vitepress.dev/vitepress-logo-mini.svg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -41,8 +41,8 @@ export default defineConfig({
         items: [
           { text: 'Button', link: '/components/button.md' },
           { text: 'Collapse', link: '/components/collapse.md' },
+          // { text: 'Icon', link: '/components/Icon.md' },
           { text: 'Form', link: '/components/form.md' },
-          { text: 'Input', link: '/components/input.md' },
           { text: 'Input', link: '/components/input.md' },
           { text: 'Message', link: '/components/message.md' },
           { text: 'Select', link: '/components/select.md' },

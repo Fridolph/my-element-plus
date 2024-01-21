@@ -44,14 +44,6 @@
         />
         <!-- suffix slot -->
         <span v-if="$slots.suffix || isHover" class="vk-input__suffix" @click="keepFocus">
-          <slot name="suffix"></slot>
-          <Icon
-            v-if="showClear"
-            icon="circle-xmark"
-            class="vk-input__clear"
-            @click="handleClear"
-            @mousedown.prevent="NOOP"
-          />
           <Icon
             v-if="props.type === 'password' && !passwordVisible"
             icon="eye"
@@ -64,6 +56,14 @@
             class="vk-input-icon__password"
             @click="togglePasswordVisible"
           />
+          <Icon
+            v-if="showClear"
+            icon="circle-xmark"
+            class="vk-input__clear"
+            @click.stop="handleClear"
+            @mousedown.prevent="NOOP"
+          />
+          <slot name="suffix"></slot>
         </span>
       </div>
       <!-- append slot -->
@@ -108,7 +108,7 @@ const props = withDefaults(defineProps<InputProps>(), {
   size: 'normal',
   modelValue: '',
   readonly: false,
-  clearable: true,
+  clearable: false,
   showPassword: false,
   autocomplete: 'off',
   placeholder: '',
@@ -128,9 +128,8 @@ watch(
 const isHover = ref(false)
 const isFocus = ref(false)
 const showClear = computed(() => {
-  if ((!props.disabled && innerValue.value) || props.clearable || isFocus.value) {
-    return true
-  }
+  if (!props.disabled && props.clearable && isFocus.value && !!innerValue.value) return true
+  if (!props.disabled && props.clearable && isHover.value && !!innerValue.value) return true
   return false
 })
 

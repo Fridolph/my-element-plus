@@ -13,7 +13,6 @@
     </Transition>
   </div>
 </template>
-
 <script setup lang="ts">
 import { ref, watch, reactive, onUnmounted, computed } from 'vue'
 import { createPopper } from '@popperjs/core'
@@ -27,9 +26,9 @@ defineOptions({
 const props = withDefaults(defineProps<TooltipProps>(), {
   placement: 'bottom',
   trigger: 'hover',
-  transitionName: 'fade',
-  openDelay: 66,
-  closeDelay: 66,
+  transition: 'fade',
+  openDelay: 0,
+  closeDelay: 0,
 })
 const emits = defineEmits<TooltipEmits>()
 const isOpen = ref(false)
@@ -39,8 +38,8 @@ const popperContainerNode = ref<HTMLElement>()
 let popperInstance: null | Instance = null
 let events: Record<string, any> = reactive({})
 let outerEvents: Record<string, any> = reactive({})
-// let openTimes = 0
-// let closeTimes = 0
+let openTimes = 0
+let closeTimes = 0
 const popperOptions = computed(() => {
   return {
     placement: props.placement,
@@ -57,14 +56,14 @@ const popperOptions = computed(() => {
 })
 
 const open = () => {
-  // openTimes++
-  // console.log('open times', openTimes)
+  openTimes++
+  console.log('open times', openTimes)
   isOpen.value = true
   emits('visible-change', true)
 }
 const close = () => {
-  // closeTimes++
-  // console.log('close times', closeTimes)
+  closeTimes++
+  console.log('close times', closeTimes)
   isOpen.value = false
   emits('visible-change', false)
 }

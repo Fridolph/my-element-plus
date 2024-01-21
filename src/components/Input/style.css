@@ -209,6 +209,7 @@
     align-items: center;
     transition: all var(--vk-transition-duration);
     margin-left: 8px;
+    cursor: pointer;
   }
   .vk-input__clear, .vk-input-icon__password {
     color: var(--vk-input-icon-color);
