@@ -57,7 +57,7 @@
       <Tooltip
         placement="right"
         trigger="click"
-        content="圣诞快sdfs 水岸东方艾斯乐"
+        content="圣诞快dlkjsadf水电费了会计师水电费水电费水岸东方艾斯乐"
       >
         <Button>点我右边</Button>
       </Tooltip>
@@ -65,7 +65,7 @@
       <Tooltip
         placement="left"        
         trigger="click"
-        content="圣诞快sdfs 水岸东方艾斯乐"
+        content="圣诞快sd水电费水电费 水电费f水电费s 水岸东是 水电费是的发生打算方艾斯乐"
       >
         <Button>出现在左边</Button>
       </Tooltip>      
