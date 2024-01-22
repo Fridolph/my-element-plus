@@ -38,8 +38,8 @@ const popperContainerNode = ref<HTMLElement>()
 let popperInstance: null | Instance = null
 let events: Record<string, any> = reactive({})
 let outerEvents: Record<string, any> = reactive({})
-let openTimes = 0
-let closeTimes = 0
+// let openTimes = 0
+// let closeTimes = 0
 const popperOptions = computed(() => {
   return {
     placement: props.placement,
@@ -55,31 +55,32 @@ const popperOptions = computed(() => {
   }
 })
 
-const open = () => {
-  openTimes++
-  console.log('open times', openTimes)
+function open() {
+  // openTimes++
+  // console.log('open times', openTimes)
   isOpen.value = true
   emits('visible-change', true)
 }
-const close = () => {
-  closeTimes++
-  console.log('close times', closeTimes)
+function close() {
+  // closeTimes++
+  // console.log('close times', closeTimes)
   isOpen.value = false
   emits('visible-change', false)
 }
+
 const openDebounce = debounce(open, props.openDelay)
 const closeDebounce = debounce(close, props.closeDelay)
 
-const openFinal = () => {
+function openFinal() {
   closeDebounce.cancel()
   openDebounce()
 }
-const closeFinal = () => {
+function closeFinal() {
   openDebounce.cancel()
   closeDebounce()
 }
 
-const togglePopper = () => {
+function togglePopper() {
   if (isOpen.value) {
     closeFinal()
   } else {
@@ -94,7 +95,7 @@ useClickOutside(popperContainerNode, () => {
     emits('click-outside', true)
   }
 })
-const attachEvents = () => {
+function attachEvents() {
   if (props.trigger === 'hover') {
     events['mouseenter'] = openFinal
     outerEvents['mouseleave'] = closeFinal
@@ -144,6 +145,7 @@ watch(
 onUnmounted(() => {
   popperInstance?.destroy()
 })
+
 defineExpose<TooltipInstance>({
   show: openFinal,
   hide: closeFinal,

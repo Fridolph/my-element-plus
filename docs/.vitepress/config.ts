@@ -53,9 +53,11 @@ export default defineConfig({
       {
         text: '相关思考及总结',
         items: [
-          { text: '编写组件思路', link: '/note/0组件.md' },          
-          { text: '需要测试', link: '/note/1你需要测试.md' },          
-          { text: '编写测试代码', link: '/note/2编写测试代码.md' },
+          { text: '色彩参考', link: '/note/0色彩参考.md' },          
+          { text: '基础组件', link: '/note/1基础组件.md' },          
+          { text: '表单组件', link: '/note/1表单组件.md' },          
+          { text: '需要测试', link: '/note/2你需要测试.md' },          
+          { text: '编写测试代码', link: '/note/3编写测试代码.md' },
         ],
       },
     ],
