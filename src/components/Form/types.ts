@@ -1,45 +1,47 @@
 import type { InjectionKey } from 'vue'
 import type { RuleItem, ValidateError, ValidateFieldsError } from 'async-validator'
-
-export type FormRules = Record<string, RuleItem[]>
-
-// Form
+export interface FormItemProps {
+  label: string
+  prop?: string
+}
+export interface FormItemRule extends RuleItem {
+  trigger?: string
+}
+export type FormRules = Record<string, FormItemRule[]>
 export interface FormProps {
   model: Record<string, any>
   rules: FormRules
 }
+
 export interface FormContext extends FormProps {
-  validate: () => any
+  addField: (field: FormItemContext) => void
+  removeField: (field: FormItemContext) => void
 }
-export const formContextKey: InjectionKey<FormContext> = Symbol('formContextKey')
-
-export interface FormEmits {
-  (e: 'submit'): void
-  (e: 'reset'): void
+export interface ValidateStatusProp {
+  state: 'init' | 'success' | 'error'
+  errorMsg: string
+  loading: boolean
 }
-
-// FormItem
-export interface FormItemProps {
-  label?: string
-  prop?: string
+export interface FormItemContext {
+  prop: string
+  validate: (trigger?: string) => Promise<any>
+  resetField(): void
+  clearValidate(): void
 }
-
-export interface FormItemContext extends FormItemProps {
-  validate: () => any
-}
-
-export const formItemContextKey: InjectionKey<FormItemContext> = Symbol('formContextKey')
-
-
-export interface FormItemEmits {}
-
 export interface FormValidateFailure {
   errors: ValidateError[] | null
   fields: ValidateFieldsError
 }
-
-export interface ValidateStatus {
-  state: 'init' | 'success' | 'fail'
-  errorMsg: string | undefined
-  loading: boolean
+export interface FormInstance {
+  validate: () => Promise<any>
+  resetFields: (props?: string[]) => void
+  clearValidate: (props?: string[]) => void
 }
+export interface FormItemInstance {
+  validateStatus: ValidateStatusProp
+  validate: (trigger?: string) => Promise<any>
+  resetField(): void
+  clearValidate(): void
+}
+export const formContextKey: InjectionKey<FormContext> = Symbol('formContextKey')
+export const formItemContextKey: InjectionKey<FormItemContext> = Symbol('formItemContextKey')

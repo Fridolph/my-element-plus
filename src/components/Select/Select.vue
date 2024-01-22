@@ -88,8 +88,6 @@ const props = withDefaults(defineProps<SelectProps>(), {
   multiple: false
 })
 const emits = defineEmits<SelectEmits>()
-const NOOP = () => {}
-
 const initialOption = findOption(props.modelValue)
 const tooltipRef = ref() as Ref<TooltipInstance>
 const inputRef = ref() as Ref<InputInstance>
@@ -275,4 +273,6 @@ function itemSelect(e: SelectOption) {
   controlDropdown(false)
   inputRef.value.ref.focus()
 }
+
+function NOOP() {}
 </script>

@@ -94,14 +94,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, computed, useAttrs, nextTick, type Ref } from 'vue'
+import { inject, ref, watch, computed, useAttrs, nextTick, type Ref } from 'vue'
 import type { InputProps, InputEmits } from './types'
 import Icon from '../Icon/Icon.vue'
+import { formItemContextKey } from '../Form/types';
 
 defineOptions({
   name: 'VkInput',
   inheritAttrs: false,
 })
+const formItemContext = inject(formItemContextKey)
 const attrs = useAttrs()
 const props = withDefaults(defineProps<InputProps>(), {
   type: 'text',
@@ -162,6 +164,7 @@ async function keepFocus() {
 function handleBlur(event: FocusEvent) {
   isFocus.value = false
   emits('blur', event)
+  runValidation()
 }
 function handleClear() {
   innerValue.value = ''
@@ -171,7 +174,9 @@ function handleClear() {
   emits('change', '')
 }
 function NOOP() {}
-
+function runValidation() {
+  formItemContext?.validate()
+}
 defineExpose({
   ref: inputRef.value,
 })
