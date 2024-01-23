@@ -6,5 +6,4 @@ Button.install = (app: App) => {
 }
 
 export default Button
-
 export * from './types'

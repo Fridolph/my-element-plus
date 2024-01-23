@@ -13,7 +13,7 @@ type WrapProps = {
 defineProps<WrapProps>()
 </script>
 
-<style scoped lang="postcss">
+<style scoped>
 .module {
   padding: 10px;
   margin-bottom: 20px;

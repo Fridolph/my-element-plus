@@ -183,7 +183,7 @@ const selectOptions = [
 ]
 </script>
 
-<style lang="postcss">
+<style scoped>
 .logo {
   height: 6em;
   padding: 1.5em;
