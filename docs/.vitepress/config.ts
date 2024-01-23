@@ -59,6 +59,8 @@ export default defineConfig({
           { text: '需要测试', link: '/note/2你需要测试.md' },          
           { text: '编写测试代码', link: '/note/3编写测试代码.md' },
           { text: '组件通信', link: '/note/4组件通信.md' },
+          { text: '了解模块化', link: '/note/5模块化了解.md' },
+          { text: '打包发布', link: '/note/6组件库打包.md' },
         ],
       },
     ],
