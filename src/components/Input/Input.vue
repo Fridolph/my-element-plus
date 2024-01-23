@@ -175,7 +175,7 @@ function handleClear() {
 }
 function NOOP() {}
 function runValidation() {
-  formItemContext?.validate()
+  formItemContext?.validate().catch(e => console.log(e.errors))
 }
 defineExpose({
   ref: inputRef.value,

@@ -1,9 +1,3 @@
-<script setup>
-import { ref } from 'vue'
-import Collapse from '@/components/Collapse/Collapse.vue'
-import CollapseItem from '@/components/Collapse/CollapseItem.vue'
-const openValue = ref(['item1'])
-</script>
 <template>
   <Collapse v-model="openValue">
     <CollapseItem name="item1" title="标题1">
@@ -23,3 +17,10 @@ const openValue = ref(['item1'])
   </Collapse>
   <p>openValue: {{ openValue }}</p>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import Collapse from '@/components/Collapse/Collapse.vue'
+import CollapseItem from '@/components/Collapse/CollapseItem.vue'
+const openValue = ref(['item1'])
+</script>

@@ -58,6 +58,7 @@ export default defineConfig({
           { text: '表单组件', link: '/note/1表单组件.md' },          
           { text: '需要测试', link: '/note/2你需要测试.md' },          
           { text: '编写测试代码', link: '/note/3编写测试代码.md' },
+          { text: '组件通信', link: '/note/4组件通信.md' },
         ],
       },
     ],

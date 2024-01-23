@@ -32,7 +32,7 @@ const resetFields = (keys: string[] = []) => {
   const filterArr = keys.length > 0 ? fields.filter((field) => keys.includes(field.prop)) : fields
   filterArr.forEach((field) => field.resetField())
 }
-const clearValidate = (keys: string[] = []) => {
+const clearValidate = (keys: string[] = []) => { 
   const filterArr = keys.length > 0 ? fields.filter((field) => keys.includes(field.prop)) : fields
   filterArr.forEach((field) => field.clearValidate())
 }
