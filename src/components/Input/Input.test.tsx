@@ -44,6 +44,7 @@ describe('Input.vue', () => {
     await input.setValue('update')
     // console.log('>>>>>>>>>>>>>>  input.element.value  >>>>>>>>>>>>>>>>>\n', input.element.value);
 
+    // @ts-ignore
     expect(wrapper.props()['modelValue']).toBe('update')
     expect(input.element.value).toBe('update')
     expect(wrapper.emitted()).toHaveProperty('input')

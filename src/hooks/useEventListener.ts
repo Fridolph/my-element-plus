@@ -1,5 +1,5 @@
 import { onMounted, onBeforeUnmount, isRef, unref, watch } from 'vue'
-import { type Ref } from 'vue'
+import type { Ref } from 'vue'
 
 export default function useEventListener(
   // 扩展，为了在vue3项目中更好使用，这里让target也支持 响应式对象
@@ -16,7 +16,6 @@ export default function useEventListener(
     onMounted(() => {
       unref(target).addEventListener(event, handler)
     })
-
   }
 
   onBeforeUnmount(() => {

@@ -87,7 +87,7 @@ async function validate(trigger?: string) {
     })
     validateStatus.loading = true
     return validator
-      .validate({ [modelName]: innerValue.value  })
+      .validate({ [modelName]: innerValue.value })
       .then(() => {
         validateStatus.state = 'success'
       })

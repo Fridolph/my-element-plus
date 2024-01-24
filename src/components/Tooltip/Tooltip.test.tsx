@@ -14,11 +14,15 @@ describe('Tooltip.vue', () => {
   beforeAll(() => {
     wrapper = mount(
       () => (
+        // @ts-ignore
         <div>
+          {/* @ts-ignore */}
           <div id="outside"></div>
           <Tooltip content="tooltip content" trigger="click" onVisibleChange={onVisibleChange}>
+            {/* @ts-ignore */}
             <button id="trigger">Trigger</button>
           </Tooltip>
+          {/* @ts-ignore */}
         </div>
       ),
       {

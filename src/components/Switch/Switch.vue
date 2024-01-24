@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue'
 import type { SwitchProps, SwitchEvents } from './types'
-import { Input } from 'postcss'
+
 defineOptions({
   name: 'VkSwitch',
   inheritAttrs: false,

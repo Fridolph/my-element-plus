@@ -59,7 +59,9 @@ export default defineComponent({
       return props.menuOptions.map((item) => {
         return (
           <Fragment key={item.key}>
+            {/* @ts-ignore */}
             {item.divided ?? <li role="separator" class="divided-placeholder" />}
+            {/* @ts-ignore */}
             <li
               class={{
                 'vk-dropdown__item': true,
@@ -70,6 +72,7 @@ export default defineComponent({
               onClick={() => itemClick(item)}
             >
               {item.label}
+              {/* @ts-ignore */}
             </li>
           </Fragment>
         )
@@ -80,6 +83,7 @@ export default defineComponent({
       hide: () => tooltipRef.value?.hide(),
     })
     return () => (
+      // @ts-ignore
       <div class="vk-dropdown">
         <Tooltip
           ref={tooltipRef}
@@ -93,9 +97,11 @@ export default defineComponent({
         >
           {{
             default: () => slots.default && slots.default(),
+            // @ts-ignore
             content: () => <ul class="vk-dropdown__menu">{options.value}</ul>,
           }}
         </Tooltip>
+        {/* @ts-ignore */}
       </div>
     )
   },

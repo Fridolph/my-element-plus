@@ -1,5 +1,5 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "extends": "@vue/tsconfig/tsconfig.lib.json",
   "include": ["src/index.ts", "src/components/**/*", "src/hooks/**/*"],
   "compilerOptions": {
     "baseUrl": ".",
@@ -10,7 +10,7 @@
   },
   "vueCompilerOptions": {
     "plugins": [
-      "@vue-macros/volar/define-model",
+      "@vue-macros/volar/define-models",
       "@vue-macros/volar/define-props",
       "@vue-macros/volar/define-props-refs",
       "@vue-macros/volar/short-vmodel",

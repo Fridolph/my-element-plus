@@ -101,7 +101,7 @@
     </Wrap>
 
     <Wrap title="Switch">
-      <Switch />
+      <Switchs />
     </Wrap>
 
     <Wrap title="Select">
@@ -121,11 +121,11 @@ import CollapseItem from './components/Collapse/CollapseItem.vue'
 import Icon from './components/Icon/Icon.vue'
 import Tooltip from './components/Tooltip/Tooltip.vue'
 import Dropdown from './components/Dropdown/Dropdown.vue'
-import { MenuOptions } from './components/Dropdown/types'
+import type { MenuOptions } from './components/Dropdown/types'
 import Message from './components/Message/Message.vue'
 import { createMessage } from './components/Message/createMessage'
 import Input from './components/Input/Input.vue'
-import Switch from './components/Switch/Switch.vue'
+import Switchs from './components/Switch/Switch.vue'
 import Select from './components/Select/Select.vue'
 
 // Button

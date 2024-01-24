@@ -1,8 +1,7 @@
 import { describe, test, expect, vi, beforeAll } from 'vitest'
 import { mount } from '@vue/test-utils'
-import { nextTick } from 'vue'
-import { type VueWrapper } from '@vue/test-utils'
 import Message from './Message.vue'
+import type { VueWrapper } from '@vue/test-utils'
 
 const mock = vi.fn()
 
@@ -26,7 +25,7 @@ describe('Message.vue', () => {
   test('3. 默认3秒自动关闭', async () => {
     // console.log('一开始的html>>>>\n', document.body.innerHTML)
     // vi.useFakeTimers()
-    // setInterval(() => Promise.resolve().then(() => {
+    // setInterval(() => Promise.resolve().then(() => {{/* @ts-ignore */}
     //   console.log('应该自动关闭后>>>>>>>>>>\n', document.body.innerHTML)
     // }), 1000)
     // await vi.advanceTimersByTimeAsync(10000)    
