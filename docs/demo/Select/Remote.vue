@@ -83,6 +83,14 @@ const handleFetch = (query) => {
 <template>
   <Select 
     v-model="test" 
+    placeholder="remoteFilter"
+    filterable
+    remote
+    :remote-method="remoteFilter"
+  />
+
+  <Select 
+    v-model="test" 
     placeholder="搜索远程结果"
     filterable
     remote

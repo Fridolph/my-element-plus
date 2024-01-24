@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,V as t}from"./chunks/framework.8jGixWW7.js";const g=JSON.parse('{"title":"编写组件的一些思考","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"think.md","filePath":"think.md"}'),e={name:"think.md"},n=t("",11),h=[n];function p(l,r,k,o,d,c){return a(),i("div",null,h)}const u=s(e,[["render",p]]);export{g as __pageData,u as default};
