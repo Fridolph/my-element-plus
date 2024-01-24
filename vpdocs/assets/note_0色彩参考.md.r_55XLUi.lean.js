@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as e,V as o}from"./chunks/framework.s2LJAcwQ.js";const u=JSON.parse('{"title":"色彩","description":"","frontmatter":{},"headers":[],"relativePath":"note/0色彩参考.md","filePath":"note/0色彩参考.md"}'),r={name:"note/0色彩参考.md"},s=o("",9),c=[s];function n(i,l,h,d,_,p){return e(),a("div",null,c)}const f=t(r,[["render",n]]);export{u as __pageData,f as default};

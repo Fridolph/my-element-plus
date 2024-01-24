@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'MyElement Docs',
   description: 'A VitePress Site',
   vite: {    
-    base: '/my-element-plus/vpdocs/',
+    base: '/my-element-plus/',
     plugins: [
       vueJsx(),
       eslint()
