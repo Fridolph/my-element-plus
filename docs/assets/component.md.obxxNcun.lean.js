@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as i,V as n}from"./chunks/framework.8jGixWW7.js";const g=JSON.parse('{"title":"关于文档","description":"","frontmatter":{},"headers":[],"relativePath":"component.md","filePath":"component.md"}'),l={name:"component.md"},e=n("",26),p=[e];function t(h,o,r,c,d,k){return i(),a("div",null,p)}const u=s(l,[["render",t]]);export{g as __pageData,u as default};
