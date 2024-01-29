@@ -1,5 +1,7 @@
 ## Vue3.4 + TS4 高仿 ElementPlus 打造自己的组件库
 
+在线文档 <fridolph.github.io/my-element-docs>
+
 ### 安装
 
 ```bash
