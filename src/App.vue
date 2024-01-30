@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="/vite.svg" class="logo" alt="Vite logo" />
+    <!-- <img src="/vite.svg" class="logo" alt="Vite logo" /> -->
     <img src="./assets/logo.svg" class="logo vue" alt="Vue logo" />
   </header>
   <main>
@@ -50,8 +50,11 @@
     </Wrap>
 
     <Wrap title="Tooltip">
-      <Tooltip placement="bottom" width="300" content="简单">
+      <Tooltip placement="bottom" content="简单">
         <Button>默认hover触发</Button>
+      </Tooltip>
+      <Tooltip content="上课了动静分离山东科技饭卡临水临电会计分录" :width="140">
+        <Button size="small" round> X </Button>
       </Tooltip>
       <span>------------</span>
       <Tooltip

@@ -9,6 +9,7 @@ export interface TooltipProps {
   transitionName?: string
   openDelay?: number
   closeDelay?: number
+  width?: number
 }
 
 export interface TooltipEmits {

@@ -4,7 +4,7 @@
       <slot />
     </div>
     <Transition :name="transitionName">
-      <div v-if="isOpen" class="vk-tooltip__popper" ref="popperNode">
+      <div v-if="isOpen" class="vk-tooltip__popper" ref="popperNode" :style="`${width ? `width:${width}px` : ''}`">
         <slot name="content">
           {{ content }}
         </slot>
@@ -49,8 +49,8 @@ const popperOptions = computed(() => {
         options: {
           offset: [0, 9],
         },
-      },
-    ],
+      },      
+    ],    
     ...props.popperOptions,
   }
 })

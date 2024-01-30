@@ -14,7 +14,7 @@ npm i fri-element-plus --save
 // 引入所有组件
 import VElement from 'fri-element-plus'
 // 引入样式
-import 'fri-element-plus/dist/style.css'
+import 'fri-element-plus/dist/index.css'
 
 import App from './App.vue'
 // 全局使用

@@ -5,10 +5,10 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 import { fileURLToPath, URL } from 'node:url'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/my-element-docs/',
   title: 'MyElement Docs',
   description: 'A VitePress Site',
   vite: {    
-    base: '/my-element-plus/',
     plugins: [
       vueJsx(),
       eslint()
